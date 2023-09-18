@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+html,body{
+  height: 100%;
+overflow: auto;
+overflow-x: hidden;
+scroll-behavior: smooth;
+margin-bottom: 0px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat Arabic Regular,Montserrat;
+    box-sizing: border-box;
+
+    
+}
+p,h1,h2,h3,h4,label{
+  color: rgb(241, 237, 230);
+}
+
+
+
+.btn-primary{
+  background:linear-gradient(180deg,#026B71,#092B39);
+  font-size: calc(12px + 2vw); 
+  padding-left:5rem ;
+  padding-right:5rem ;
+  border: 0;
+  box-shadow: inset 0px 3px 6px var(--unnamed-color-00000029);
+  box-shadow: inset 0px 3px 6px #00000029, -4px 5px 49px #006165;
+  mix-blend-mode: lighten;
+  border-radius: 28px;
+  opacity: 1;
+}
+.btn-primary:hover{
+  background:linear-gradient(180deg,#092B39,#026B71);
+  transition: 0.8s;
+}
+.btn-primary:active{
+  box-shadow:   7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+transform: translateY(6px);
+}
+
+.glowy-border{
+  border: 2.48px solid var(--unnamed-color-00d1b8);
+  border: 2px solid #00D1B8;
+  border-radius: 75px;
+  opacity: 1;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+.form-switch .form-check-input:focus {
+  border-color: rgba(0, 0, 0, 0.25);
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
+}
+.form-switch .form-check-input:checked {
+  background-color: #17A2AF;
+  border-color: #17A2AF;
+  border: none;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
+
+
+@font-face {
+    font-family: Montserrat Arabic Thin;
+    src: url(assets/fonts/montserrat-arabic-thin/montserrat-arabic-thin.ttf) format("opentype");
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: Montserrat Arabic Regular;
+    src: url(assets/fonts/montserrat-arabic-regular/montserrat-arabic-regular.ttf) format("opentype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: Montserrat Arabic Bold;
+    src: url(assets/fonts/montserrat-arabic-bold/montserrat-arabic-bold.ttf) format("opentype");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: Montserrat Arabic light;
+    src: url(assets/fonts/montserrat-arabic-light/montserrat-arabic-light.ttf) format("opentype");
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: Montserrat Arabic extralight;
+    src: url(assets/fonts/montserrat-arabic-extralight/montserrat-arabic-extralight.ttf) format("opentype");
+    font-weight: 300;
+  }
+  
+

@@ -1,0 +1,59 @@
+<div class="mx-auto my-5">
+    <h2 class="text-center">خريطة مؤشر التشوه البصري </h2>
+    <h2 class="text-center">Visual Pollution Parameter Map </h2>
+    <div class="row mx-auto">
+        <div class="col-12 mx-auto" id="heatmap"></div>
+    </div>
+
+    <div class=" parameter-container rounded-5 p-3 my-5">
+        <div class="row ">
+        <div class="  col-12 col-md-3 my-auto">
+            <h3>{{pollution_item.weight}}</h3>
+            <div class="row param-tag border p-1 rounded-5 text-center mx-auto my ">مؤشر التلوث</div>
+            <img class="row mx-auto w-100 my-5" src="assets/images/curve_points.png">
+            <img class="row hide-mob  w-50 mx-auto " src="assets/images/piechart.png">
+        </div>
+        <div class=" col-12 col-md-3 my-auto">
+            <div class="col">
+            <div class="row d-flex justify-content-between mx-auto mb-6 text-end px-3">
+                <img class="col-6 img-fluid " src="assets/images/no@2x.png">
+                <img class="col-6 img-fluid" src="assets/images/pollution_effect.png">
+
+
+            </div>
+
+            <div class="row row-cols-2 mt-5">
+                <div *ngFor="let effect of pollution_effects" class="col text-center">
+                    <img src="assets/images/{{effect.icon}}" height="50%">
+                    <h3 class="my-3">{{effect.percent}}%</h3>
+
+                </div>
+            </div></div>
+
+        </div>
+        <div class="hide-mob col-12 col-md-1 my-auto">
+            <img  class="  mx-3"src="assets/images/vline.png" height="90%">
+            </div>
+        <div class="col-12 col-md-3 order-4 order-md-3 my-auto">
+
+            <div class="half-chart">
+            <img class="mx-auto w-75 " src="assets/images/half_chart.png">
+            
+            <div  class="half-chart-txt">
+                
+                <p class="mb-1 mt-0" style="color:#3DE9E2" *ngFor="let per of percent_list">
+
+                {{per}}%</p></div>
+        </div>
+  
+        </div>
+      
+        <div class="col-12 col-md-2 order-3 order-md-4 my-auto">
+            <div class="row"> <h1>مؤشر <br>التلوث</h1>
+            </div>
+            <div class=" row mx-auto hide-mob justify-content-center "> <img class="col-6" src="assets/images/air-pollution@2x.png">
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

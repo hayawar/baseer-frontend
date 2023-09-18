@@ -1,0 +1,69 @@
+<img class="bg-img " src="assets/images/bg-all.png" width="100%" height="100%">
+<div class="row stream-container">
+
+    <div class="col-12 col-md-6  reporting-map flex-fill mb-5 " @movementAnimation [class.fly]="trans">
+        <h2> خريطة المراقبة</h2>
+        <h2>Sureveillance Map</h2>
+       
+
+        <div  @fadeInOut  class="map-container d-flex align-items-center">
+  <div  id="map-leaf"></div>
+        </div>
+
+    </div>
+ 
+    <div *ngIf="currentDrone" class="col-12 col-md-6 live-stream me-auto ms-auto mb-5">
+        <div class="row">
+            <div class="col-12">
+        <h2>البث المباشر</h2>
+        <h2> Live Stream</h2>
+   
+        <div class=" form-check form-switch float-start">
+            <label class="form-check-label custom-control-label"  dir="rtl" for="flexSwitchCheckChecked">الكشف الفوري</label>
+            <input (change)="toggleFeed()" class="form-check-input custom-control-input " type="checkbox" role="switch" id="flexSwitchCheckChecked"  />
+        </div>
+          </div>
+        <div *ngIf="!viewFeed; else vid"  @fadeInOut [@fadeInOut.start]="printlog()" class="drone-container me-auto ms-auto">  
+            <img style="object-fit: fit;" src="assets/images/drone_map.png" width="65%">
+            <div  class=" container drone-specs">
+                <div class="row">
+                    <div class="col">
+                        <div><img src="assets/images/drone_spec.png"></div>
+                        <p>المسافة المقطوعة</p>
+                    </div>
+                    <div class="col greyed">
+                        {{currentDrone.spent_dist}}<span class="blued">km</span>
+                    </div>
+                    <div class="col greyed">
+                        {{currentDrone.spent_time}}<span class="blued">min</span>
+                    </div>
+                </div>
+                <div class="row text-start">
+                    <div class="col p-0 m-0">
+                    <div class="p-0 m-0"><img src="assets/images/distance.png"></div>
+                        <p>المسافة المتبقية</p>
+                    </div>
+                    <div class="col greyed">
+                        {{currentDrone.rem_dist}}<span class="blued">km</span>
+                    </div>
+                    <div class="col greyed">
+                        {{currentDrone.rem_time}}<span class="blued">min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #vid>
+            <div>
+           <livefeed [id]="id"></livefeed>
+        </div>
+         </ng-template>   
+
+    </div>
+
+</div>
+
+
+
+
+
+</div>

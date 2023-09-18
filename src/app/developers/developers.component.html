@@ -1,0 +1,44 @@
+<img class="bg-img" src="assets/images/bg-all.png" width="100%" height="100%">
+<section class="p-3 row" >
+    <h2 class=" text-center"> مطـوري نـظام بـصـير</h2>
+    <h2 class=" text-center"> Developers of Baseer  </h2>
+
+
+
+<div class="glowy-border  py-5 mt-5  justify-content-between col-11 col-md-9 m-2 ">
+<div class="row w-100 w-sm-80 row m-2 mx-auto justify-content-around">
+
+
+
+
+
+    <div *ngFor="let developer of developers" class="col-12 col-xxl-5 dev-card mb-5  p-4 pt-5">
+        <div class="row dev-cont  align-items-center">
+        <div class="dev-img me-5"><img c [src]="developer.img" [alt]="developer.name"></div>
+            <div class="dev-content">
+                <h3>{{developer.name}}</h3>
+                <p class="text-white career font-weight-light opacity-50">{{developer.career}}</p>
+                <a target="_blank" class="float-end linkedin" [href]="developer.linkedin"><img src="assets/images/linkedin.svg" alt="linkedin"></a>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+    
+</div>
+
+
+
+<div class="dev-logo mx-auto row d-flex justify-content-center ">
+    <img  class="col-md-3 col-5" src="assets/images/logo-devs.svg" alt="">
+</div>
+
+</div>
+
+
+</section>

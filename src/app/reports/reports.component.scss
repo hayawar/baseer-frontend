@@ -1,0 +1,52 @@
+.reports-conatiner {
+
+  .cont-arrow:active {
+
+    transform: translateY(3px);
+  }
+
+  .cont-arrow {
+
+    position: relative;
+
+    .arrow-img:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .list-container {
+    width: 70%;
+
+    .report-card {
+
+
+      .card-right {
+
+        img {
+          border-radius: 1.5rem;
+          height: 20vh;
+          width: 16vw;
+          min-width: 200px;
+        }
+
+
+      }
+
+      .view-btn {
+        padding: 0.5rem;
+        font-size: calc(12px + 0.25vw);
+
+      }
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 991px) {
+  .list-container{
+      min-width: 100%;
+
+  }
+}

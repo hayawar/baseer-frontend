@@ -1,0 +1,139 @@
+<img class="bg-img" src="assets/images/bg-all.png" width="100%" height="100%" />
+
+<div class="container">
+  <h2 class="text-center">مظاهر التشوه البصري</h2>
+  <h2 class="text-center">Cases of Visual Pollution</h2>
+
+  <div class="row item-container glowy-border py-5 my-5 ms-auto me-auto">
+    <div class="col">
+      <div class="row">
+        <div
+          class="cont-arrow col-1 mx-0 p-0 mt-2 float-start"
+          (click)="changeItem(false)"
+        >
+          <img
+            class="img-fluid arrow-img float-start"
+            src="assets/images/left-arrow.png"
+            height="120px"
+          />
+        </div>
+
+        <div class="col-10">
+          <div class="row">
+            <div class="col-12 col-md-6 rounded-3 mb-3">
+              <img
+                class="img-fluid rounded-4 mx-auto"
+                src="/assets/images/annotated_images/{{
+                  pollutionItem.image_path
+                }}"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="row">
+                <div
+                  class="col-5 col-sm-12 order-2 order-sm-1 ms-auto float-end"
+                >
+                  <div class="d-flex justify-content-end">
+                    <div class="pulse-led">
+                        <span style="--i:0;"></span>
+                        <span style="--i:1;"></span>
+                        <span style="--i:2;"></span>
+                        <span style="--i:3;"></span></div>
+                    <div>
+                      <img
+                        class="img-fluid float-end"
+                        src="assets/images/cctv-camera.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="float-sm-end p-3 col-7 col-sm-12 order-sm-2 order-1 single-text my-auto"
+                >
+                  <h4 class="text-end">{{ pollutionItem.title }}</h4>
+                  <p class="text-end">مظهر تلوثي في حاجة لعناية مستعجلة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row glowy-border report-info rounded-4 my-5 mx-auto p-2">
+            <div
+              class="col-3 col-md-3 d-flex justify-content-end report-info-item"
+            >
+              <div class="row">
+                <img
+                  class="img-fluid my-auto mx-auto col-10 col-lg-4 order-lg-2"
+                  src="assets/images/clock.png"
+                  height="60px"
+                />
+                <p class="my-auto mx-auto col-12 col-lg-7 order-lg-1">
+                  {{ time }}
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-3 col-md-3 d-flex justify-content-end report-info-item"
+            >
+              <div class="row">
+                <img
+                  class="img-fluid my-auto mx-auto col-10 col-lg-4 order-lg-2"
+                  src="assets/images/calendar.png"
+                  height="60px"
+                />
+                <p class="my-auto mx-auto col-10 col-lg-7 order-lg-1">
+                  {{ date }}
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-3 col-md-3 d-flex justify-content-end report-info-item"
+            >
+              <div class="row">
+                <img
+                  class="img-fluid my-auto mx-auto col-10 col-lg-4 order-lg-2"
+                  src="assets/images/file-invoice.png"
+                  height="60px"
+                />
+                <p class="my-auto mx-auto col-12 col-lg-7 order-lg-1">
+                  {{ status }}
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-3 col-md-3 d-flex justify-content-end report-info-item"
+            >
+              <div class="row">
+                <img
+                  class="img-fluid my-auto mx-auto col-12 col-lg-5 order-lg-2 float-md-end"
+                  src="assets/images/area-with-pins.png"
+                  height="60px"
+                />
+                <p class="my-auto mx-auto col-12 col-lg-7 order-lg-1">
+                  موقع <br />البلاغ
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="cont-arrow col-1 mx-0 p-0 mt-2 float-end"
+          (click)="changeItem(true)"
+        >
+          <img
+            class="img-fluid arrow-img float-end"
+            src="assets/images/right-arrow.png"
+            height="120px"
+          />
+        </div>
+      </div>
+      <div class="row mx-auto w-100">
+        <pollution-parameter
+          [pollution_item]="pollutionItem"
+        ></pollution-parameter>
+      </div>
+    </div>
+  </div>
+</div>

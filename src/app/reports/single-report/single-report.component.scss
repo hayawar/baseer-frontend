@@ -1,0 +1,115 @@
+.bg-img {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.cont-arrow:active {
+  transform: translateY(3px);
+}
+
+.cont-arrow {
+  position: relative;
+
+  .arrow-img:hover {
+    opacity: 0.8;
+  }
+}
+
+.item-container {
+  height: fit-content;
+  p {
+    font-family: Montserrat Arabic extralight;
+    font-size: calc(10px + 0.4vw);
+    text-align: end;
+  }
+
+  .pulse-led {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 5rem;
+    margin-right: 1rem;
+    opacity: 0.9;
+    animation: glow 3s linear infinite;
+
+    span {
+      position: absolute;
+      border-radius: inherit;
+      background-color: inherit;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      animation: pulseAnimation 4s ease-out infinite;
+      animation-delay: calc(2s * var(--i));
+    }
+  }
+}
+
+.bor {
+  border: 5px red solid;
+}
+
+@keyframes pulseAnimation {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+@keyframes glow {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.25;
+  }
+  15% {
+    opacity: 0.35;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.85;
+  }
+  74% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.75;
+  }
+  84% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .item-container {
+    .pulse-led {
+      width: 15px;
+      height: 10px;
+      margin-top: 3rem;
+      margin-right: 0.1rem;
+    }
+
+    p {
+      font-size: 9px;
+    }
+  }
+}

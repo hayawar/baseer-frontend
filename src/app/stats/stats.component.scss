@@ -1,0 +1,66 @@
+
+section{
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#performance-stat{
+    min-height: 85vh;   
+}
+.bor{
+    border: 5px red solid;
+}
+
+.performance-container{
+    background:linear-gradient(150deg,#00757A,#092936);
+    padding-left:5rem ;
+    padding-right:5rem ;
+    border: 0.5px black solid;
+    box-shadow: inset 0px 3px 6px #00000065, -4px 5px 19px #050f0f;
+    mix-blend-mode: lighten;
+    border-radius: 28px;
+    opacity: 1;
+    min-height: 50vh;
+
+    
+}
+.contributers-cont{
+    background:linear-gradient(180deg,#00777C,#084f58); 
+    box-shadow: inset 0px 3px 6px #00000029, -4px 5px 49px #006165;
+    mix-blend-mode: lighten;
+    border-radius: 28px;
+    opacity: 1;
+
+
+}
+.names-list-cont{
+    background:linear-gradient(180deg,#00777C,#29B5BD); 
+    box-shadow: inset 0px 3px 6px #00000065, -4px 5px 19px #050f0f;
+    mix-blend-mode: lighten;
+    border-radius: 28px;
+    opacity: 1;
+}
+.detail-btn{
+    font-size: calc(12px + 0.6vw);
+    width: fit-content;
+}
+.barchart *{
+    font-family: Montserrat Arabic light;
+    color: white;
+  }
+  p{
+    font-family: Montserrat Arabic light;
+  }
+  .regular{
+    font-family: Montserrat Arabic Regular;
+  }
+  @media screen and (max-width:1200px) { 
+
+
+.hide-mobile{
+ display: none;
+}
+  }

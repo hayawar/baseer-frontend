@@ -1,0 +1,49 @@
+<img class="bg-img" src="assets/images/bg-all.png" width="100%" height="100%">
+
+
+<div class=" container reports-conatiner">
+    <h2 class=" text-center"> مظاهر التشوه البصري</h2>
+    <h2 class=" text-center"> Cases of Visual Pollution</h2>
+
+
+    <div class="row list-container glowy-border py-5 mt-5 ms-auto me-auto">
+        <div class="cont-arrow bor col-1 mx-0 mt-2 p-0 float-start" (click)="offset>0?movePage(false):{}">
+            <img  class="img-fluid arrow-img float-start" src="assets/images/left-arrow.png" height="120px">
+
+        </div>
+
+        <div class="col-10 ">
+            <div *ngIf="showLoader; else data" class="mt-5 text-center">
+                <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif"/>
+             </div>
+             <ng-template #data>
+              
+            <ul type="none">
+                <li class=" row text-center align-items-center" *ngFor="let item of pollutionList">
+                    <!-- {{item | json}} -->
+                    <div class="row row-lg-4 report-card w-60" @fadeIn>
+                        <div class="col col-md-6 my-5 ">
+                            <h4>{{item.title}}</h4>
+                            <p>مظهر تلوثي في حاجة لعناية مستعجلة</p>
+                        </div>
+                        <div class=" card-right col col-md-6 mb-5 h-100 ">
+                            <div class="row mb-3 mx-auto justify-content-center"> <img 
+                                    src="assets/images/annotated_images/{{item.image_path}}"> </div>
+                            <div class="row justify-content-center"> <button [routerLink]="['/main/reports', item.id]" type="button"
+                                    class=" w-50  btn btn-primary btn-md rounded-pill  view-btn">عــرض</button> </div>
+                        </div>
+
+
+                    </div>
+                </li>
+            </ul>
+             </ng-template>
+        </div>
+
+        <div class="cont-arrow bor col-1 mx-0  p-0 mt-2 float-end" (click)="limit<50?movePage(true):{}">
+            <img  class="img-fluid arrow-img float-end" src="assets/images/right-arrow.png" height="120px">
+
+        </div>
+      
+    </div>
+</div>

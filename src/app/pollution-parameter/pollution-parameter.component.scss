@@ -1,0 +1,56 @@
+#heatmap{
+    margin: 1rem auto 0 auto;
+    border-radius: 1rem;
+    height: 65vh;
+    width: 100%;
+  }
+
+  .parameter-container{
+    border: 4px solid #07A5A0;
+    background: linear-gradient(108deg,#0095B438,#80808000);
+   
+
+    h3,h1{
+      font-family: Montserrat Arabic light;
+      text-align: center;
+    }
+    .param-tag {
+      font-family: Montserrat Arabic Extralight; width: fit-content;
+      color: white;
+    }
+    .half-chart{
+      position: relative;
+   
+
+    }
+    .half-chart-txt{
+   position: absolute;
+   text-align: center;
+   left: 55%;
+   top: 0%;
+
+    }
+    .half-chart-img{
+      position: absolute;
+  
+
+    }
+    // .col,.col-6{
+    //   border: 4px solid red;
+    // }
+  }
+  .bor{
+    border: 5px red solid;
+}
+  @media screen and (max-width: 991px) { 
+
+       .container{
+
+        min-width: 100%;
+       }
+  .hide-mob{
+    display: none;
+  }
+    
+  }
+  

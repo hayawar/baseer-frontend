@@ -1,0 +1,155 @@
+section {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .dev-card {
+    border: #0bdff3 4px solid;
+    border-radius: 35px;
+    background: rgb(0, 149, 180);
+    background: linear-gradient(
+      174deg,
+      rgba(0, 149, 180, 0.75) 0%,
+      rgba(128, 128, 128, 0.1) 75%
+    );
+
+    .dev-cont {
+      position: relative;
+      padding-left: 6rem;
+      min-height: 150px;
+      .career {
+        font-family: Montserrat Arabic extralight;
+      }
+
+      .dev-img {
+        position: absolute;
+        right: 10%;
+        transition: all 0.2s ease;
+
+        img {
+          border-radius: 35px;
+          box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+        }
+      }
+      .dev-img:hover {
+        scale: (1.05);
+      }
+
+      .linkedin {
+        transition: transform 0.7s ease-in-out;
+      }
+      .linkedin:hover {
+        transform: rotate(15deg);
+        opacity: 80%;
+      }
+    }
+  }
+
+  /* CUSTOM WIDTHS */
+  .w-10,
+  .w-xs-10 {
+    width: 10% !important;
+  }
+  .w-15,
+  .w-xs-15 {
+    width: 15% !important;
+  }
+  .w-30,
+  .w-xs-30 {
+    width: 30% !important;
+  }
+  .w-75,
+  .w-xs-75 {
+    width: 75% !important;
+  }
+  .w-80,
+  .w-xs-80 {
+    width: 80% !important;
+  }
+
+  /* BREAKPOINTS */
+
+  /* SM breakpoint */
+  @media (min-width: 576px) {
+    /* CUSTOM WIDTHS */
+    .w-sm-10 {
+      width: 10% !important;
+    }
+    .w-sm-15 {
+      width: 15% !important;
+    }
+    .w-sm-30 {
+      width: 30% !important;
+    }
+    .w-sm-75 {
+      width: 75% !important;
+    }
+    .w-sm-80 {
+      width: 80% !important;
+    }
+  }
+
+  /* MD breakpoint*/
+  @media (min-width: 768px) {
+    /* CUSTOM WIDTHS */
+    .w-md-10 {
+      width: 10% !important;
+    }
+    .w-md-15 {
+      width: 15% !important;
+    }
+    .w-md-30 {
+      width: 30% !important;
+    }
+    .w-md-75 {
+      width: 75% !important;
+    }
+    .w-md-80 {
+      width: 80% !important;
+    }
+  }
+
+  /* LG breakpoint */
+  @media (min-width: 992px) {
+    /* CUSTOM WIDTHS */
+    .w-lg-10 {
+      width: 10% !important;
+    }
+    .w-lg-15 {
+      width: 15% !important;
+    }
+    .w-lg-30 {
+      width: 30% !important;
+    }
+    .w-lg-75 {
+      width: 75% !important;
+    }
+    .w-lg-80 {
+      width: 80% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .dev-cont {
+    position: relative;
+    padding-left: 0;
+
+    .dev-img {
+        position: absolute;
+      
+     
+      left: -20%;
+      img{
+        width: 140px;
+        height: 140px;
+        object-fit: contain;
+        border-radius: 20px;
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}

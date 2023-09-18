@@ -1,0 +1,28 @@
+.upload-cont{
+    border: 2px dashed white;
+    height: 60vh;
+
+
+
+
+}
+
+.upload-btn{
+    background-color: #3ba6ac !important;
+    font-size: calc(12px + 0.2vw); 
+    border: 0;
+    mix-blend-mode: lighten;
+    border-radius: 1rem;
+    opacity: 1;
+}
+.upload-btn:hover{
+    background-color: #2b7379 !important;
+}
+.upload-btn:active{
+    box-shadow:   7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transform: translateY(6px);
+}
+p{
+    font-size: calc(12px + 0.4vw);
+    color: rgb(207, 90, 90);
+}

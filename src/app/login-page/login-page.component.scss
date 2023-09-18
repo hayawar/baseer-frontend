@@ -1,0 +1,48 @@
+.login-cont {
+
+    height: 90vh;
+    opacity: 1;
+
+    h2 {
+        text-align: center;
+    }
+    .person-icon{
+        width: 25%;
+    }
+    .input-group{
+        background:linear-gradient(180deg,#026b719f,#092b39ad);
+    }
+
+    
+    input[type=text] {
+        background-color: rgba(0, 0, 0, 0) !important;
+        border: none !important;
+        color: #8B9CA1;
+    }
+      
+  
+    .login-btn{
+        width: fit-content;
+
+        font-size: calc(12px + 0.5vw);
+
+    }
+    p,label{
+        color: #8B9CA1;
+        opacity: 0.6;
+        font-size: calc(12px + 0.1vw);
+    }
+
+
+      
+}
+@media screen and (min-width: 600px) {
+    .login-cont {
+        width: 425px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .login-cont {
+        width: 90%;
+    }
+}

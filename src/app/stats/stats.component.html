@@ -1,0 +1,87 @@
+<img class="bg-img" src="assets/images/bg-all.png" width="100%" height="100%">
+
+
+<section id="performance-stat">
+    <div class="container ">
+        <div class="row justify-content-center my-auto">
+            <h1 class="text-center">إحصائيات الأداء</h1>
+            <h1 class="text-center">Performance Statistics</h1>
+        </div>
+
+
+        <div class="row crd mt-5 row-eq-height">
+            
+            <div *ngFor="let stat of performenceStats" class="col-12 col-md-3 " >
+
+                <div class=" performance-container p-5 my-5 ">
+                    <div class="row mx-auto w-50 my-sm-4 mt-0 h-75 "><img class="img-fluid" [src]="stat.path"></div>
+                    <div class="row my-4 text-center ">
+                        <h4 class="col">{{stat.text}}</h4>
+                    </div>
+                    <div class="row my-3 text-center ">
+                        <h1 class="col">+{{stat.current}}</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-0 "><button type="button" (click)="scrollTo(stat.anchor)"
+                        class="btn btn-primary btn-lg rounded-pill mx-auto detail-btn text-center ">
+                        التفاصيل
+                    </button></div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+<section id="classes-stat">
+
+    <div class="container my-5">
+
+        <p-chart #pchart class="barchart" [options]="chartOptions" type="bar" width="100%" height="80vh"
+            [data]="databar"></p-chart>
+
+    </div>
+
+</section>
+<section id="contributers-stat">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="contributers-cont p-md-5 py-5 px-3">
+                    <h2 class="text-center">أبرز المسـاهـمين</h2>
+                    <h2 class="text-center">Major Contributers</h2>
+                    <div class="names-list-cont  p-3">
+                        <div *ngFor="let user of people" class="row my-3  align-items-center">
+                            <div class="col-3 col-md-3 mx-auto">
+                                <p class="text-center">عدد البلاغات</p>
+                                <p class="text-center">{{user.num}}</p>
+                            </div>
+
+                            <div class="hide-mobile  col-md-3 col-0 mx-auto my-auto  "
+                                style="font-family:'Montserrat Arabic Thin';color: aliceblue;">
+                                <p class="text-center">- - - - - - - -</p></div>
+                            <div class="  col-6 col-md-3">
+                                <p class="text-end regular"> {{user.name}}</p>
+                                <p class="text-end"> {{user.role}}</p>
+                            </div>
+
+                            <div class=" col-3 col-md-3 my-auto"
+                            ><img class="img-fluid my-auto" src="assets/images/user.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="saudi-areas" class="col-12 col-md-6  d-flex  align-items-center justify-content-center">
+                <div>
+                    <h3 class="mb-5 text-center mx-auto"> مناطق التركيز</h3>
+                    <div class="ms-5"> <img width="100%" src="assets/images/saudi_map.png"></div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
